@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 .header {
   display: flex;
@@ -144,7 +145,7 @@
 .hero-button {
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
-  background-color: #2563eb;
+  background-color: #0f172a;
   color: white;
   border: none;
   border-radius: 8px;
@@ -269,7 +270,7 @@ textarea {
 button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: #2563eb;
+  background: #0f172a;
   color: white;
   font-size: 1rem;
   border: none;
@@ -311,4 +312,197 @@ button:hover {
   .full-width {
     grid-column: span 1;
   }
+}
+
+.thank-you-page {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f9fafb;
+  animation: fadeIn 1s ease;
+}
+
+.thank-you-page img {
+  max-width: 200px;
+  width: 100%;
+  margin-bottom: 2rem;
+  animation: floatUp 2.5s ease-in-out infinite alternate;
+}
+
+.thank-you-page h1 {
+  font-size: 2.5rem;
+  color: #0f172a;
+}
+
+.thank-you-page p {
+  font-size: 1.2rem;
+  color: #475569;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.campaign-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #f8fafc, #e2e8f0);
+  min-height: 80vh;
+}
+
+.campaign-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.campaigns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.campaign-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.campaign-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.08);
+}
+
+.campaign-card h3 {
+  font-size: 1.3rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.campaign-card p {
+  font-size: 1rem;
+  color: #475569;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  min-height: 48px;
+}
+
+.campaign-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.join-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: #0f172a;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.join-btn:hover {
+  background-color: #1e40af;
+  transform: scale(1.03);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-wrapper {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: #f8fafc;
+  color: #0f172a;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.oauth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #eef2ff, #f8fafc);
+}
+
+.oauth-image {
+  width: 220px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.oauth-status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #475569;
 }

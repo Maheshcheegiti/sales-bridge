@@ -8,7 +8,6 @@ export default function Footer() {
         <div className="footer-links">
           <a href="#form">Lead Form</a>
           <a href="#campaigns">Campaigns</a>
-          <a href="#contact">Contact</a>
         </div>
       </div>
     </footer>
